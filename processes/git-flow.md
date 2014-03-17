@@ -51,4 +51,16 @@ If a release branch exists, merge the hotfix branch into `master` and the releas
 
 ## The tool
 
+The [git-flow](https://github.com/nvie/gitflow) tool does fancy stuff for those who want to use the git flow branching model without having to give it a lot of thought. 
+
+### Commands:
+
+    git flow init [-d for defaults]
+    git flow [feature | release | hotfix] start <name>
+    git flow [feature | release | hotfix] finish <name>
+    git flow feature [publish | pull <remote>] <name>
+
+### Additional support:
+
+There's an oh-my-zsh plugin for that (depends on the git plugin, just include `git` and `git-flow`).
 
