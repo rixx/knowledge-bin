@@ -40,4 +40,18 @@ A conforming implementation must fully implement at least one of the five basic 
 | Decimal64  |                     | 10   | 16     | -383,384       |                |                            |
 | Decimal128 |                     | 10   | 34     | -6143,6144     |                |                            |
 
+### Extended and extendable Formats
 
+Basic formats can be extended by using more precision and a greater exponent range. b, p and emax need to be re-defined. Implementations of this standard need not support extendable formats. 
+
+### Interchange formats
+
+For the exchange of binary numbers: 16 bit, 32 bit, 64 bit, and 128 + n*32 bit interchange formats. 
+
+`k` bit format: Sign bit, `w = round(4* log_2(k)) -13)` exponent bits (describe exponent, offset by the bias), `p-1` significand bits.
+
+## Rounding Rules
+
+Recommended: round to the nearest, ties to next even number.
+
+Alternatives: ties away from zero, always towards 0, always towards +∞, always towards -∞.
