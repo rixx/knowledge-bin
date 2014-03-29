@@ -25,3 +25,19 @@ Rules, p being the precision (number of digits in the significand), and emax the
  - q must be an integer such that `1 - emax <= q+p-1 <= emax`
 
 Zero values are signed, so there is +0 and -0.
+
+### Basic formats
+
+A conforming implementation must fully implement at least one of the five basic formats. Precision is typically one bit more than the width of the significant (because the leading 1 is implied).
+
+| Name       | aka                 | base | digits | exponent range | decimal digits | maximum exponent (decimal) |
+|------------|---------------------|------|--------|:--------------:|----------------|----------------------------|
+| Binary16   | half precision      | 2    | 10+1   | -14,15         | 3.31           | 4.51                       |
+| Binary32   | single precision    | 2    | 23+1   | -126,127       | 7.22           | 38.23                      |
+| Binary64   | double precision    | 2    | 52+1   | -1022,1023     | 15.95          | 307.95                     |
+| Binary128  | quadruple precision | 2    | 112+1  | -16382,16383   | 34.02          | 4931.77                    |
+| Decimal32  |                     | 10   | 7      | -95,96         |                |                            |
+| Decimal64  |                     | 10   | 16     | -383,384       |                |                            |
+| Decimal128 |                     | 10   | 34     | -6143,6144     |                |                            |
+
+
