@@ -57,12 +57,10 @@ Calories are energy!
 
 Assumptions: 70kg, 172cm, female, 21
 
-exercise     |     Mifflin-St Jeor      |      Harris-Benedict     |
--------------|--------------------------|--------------------------|
-             | maintenance |  fat-loss  | maintenance |  fat-loss  |
+exercise     |    Mifflin- | St Jeor    |     Harris- | Benedict   |
 -------------|-------------|------------|-------------|------------|
+             | maintenance |  fat-loss  | maintenance |  fat-loss  |
 no exercise  |   1811 kcal |  1449 kcal |   1853 kcal |  1483 kcal |
 3 times/week |   2075 kcal |  1660 kcal |   2124 kcal |  1699 kcal |
--------------|--------------------------|--------------------------|
 
 [source](http://www.freedieting.com/tools/calorie_calculator.htm), [science](http://www.freedieting.com/calorie_needs.html)
