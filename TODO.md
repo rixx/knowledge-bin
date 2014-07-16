@@ -18,3 +18,8 @@
     [ ] code/science/computers/the_annotated_turing.md
     [ ] code/science/computers/the_systems_bible.md
     [ ] code/science/computers/computational_complexity_a_modern_approach.md
+    [ ] cookistry/soylent.md
+    [ ] crafts/sewing.md
+    [ ] crafts/3dprinting.md
+    [ ] crafts/vectorizing.md
+
