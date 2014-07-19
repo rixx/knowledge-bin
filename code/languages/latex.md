@@ -4,32 +4,32 @@ You know the drill. pdflatex is for pdfs, lualatex may include lua scripting, xe
 
 ## Basic Syntax
 
-   { }
-   \begingroup
-   \endgroup
+    { }
+    \begingroup
+    \endgroup
 
 Groups limits the range of commands inside them.
 
-   \begin{name}
-   \end{name}
+    \begin{name}
+    \end{name}
 
 Environments are somewhat similar to commands with a wider scope.
 
-   \command[option,option2]{argument}{argument2}
+    \command[option,option2]{argument}{argument2}
 
 A command. Most commands have a *switch* equivalent. Those do not take arguments, but apply on the rest of the scope:
 
-   \emph{emphasized text}
-   {\em emphasized text }
+    \emph{emphasized text}
+    {\em emphasized text }
 
 ## Document Structure
 
-   \documentclass{...}
-   %here: preamble
-   
-   \begin{document}
-   %stuff
-   \end{document}
+    \documentclass{...}
+    %here: preamble
+    
+    \begin{document}
+    %stuff
+    \end{document}
 
 
 ## Document classes
@@ -56,6 +56,7 @@ A command. Most commands have a *switch* equivalent. Those do not take arguments
 
 ## The Document Environment
 ###Beginning
+
     \title{Bla}
     \author{keks\\
     cookie monster academy}
@@ -80,7 +81,8 @@ A command. Most commands have a *switch* equivalent. Those do not take arguments
 * \subparagraph
 
 Example:
-   \section[Short for TOC]{Name too long for the Table of Contents, I guess}
+
+    \section[Short for TOC]{Name too long for the Table of Contents, I guess}
 
 If you only want parts and sections numbered (not subsections) or want to limit the depth of the table of contents:
 
@@ -193,12 +195,14 @@ Not as good, you need to specify `\mathroman{text}` for all text occurences. If 
 
 
 ### Quotes
+
     \quote                       % short quotation(s), separated by blank lines
     \quotation                   % longer quotations, >1 paragraph
     \verse                       % to quote lyric stuff
 
 
 ### Verbatim and Comments
+
     \usepackage{verbatim}
     \begin{verbatim}             % reproduces every character you write, including spaces
     \verb+my text+               % verbatim command, first character is delimiter
