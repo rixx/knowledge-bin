@@ -126,4 +126,18 @@ Code and Manuals are to be handed in separately.
 * Deductions: Do it. Use 'I' as marker. You can come to negative conclusions, that is fine, too. 
 * Arguments: make it easy to follow. If need be, repeat yourself.
 
+### Language
 
+Wolf Schneider. Tucholsky. That stuff. 
+
+No using of stupid words. Be precise. Be concise. Good metaphors are ok. Do not use too many. One metaphor should be enough for everyone.
+
+Substantivstil is for kleinkarierte paper pushers. Use verbs, they are alive.
+
+Short sentences. Substantive clauses. Subordinate clauses for subordinate content. Repeating words yields clarity, do not avoid. Keep temporal structure (first … then … finally …).
+
+Filler words are bad. Bad. Bad. Not mostly bad. Not slightly bad. Not seen as bad. Bad. 
+
+Buzzwords. Oh, dear Dijkstra, don't get me started. Seriously, don't. 
+
+And, yeah, everything. No need to write it down, hopefully: Just what Wolf Schneider says. And the usenet. Then you cannot go wrong.
