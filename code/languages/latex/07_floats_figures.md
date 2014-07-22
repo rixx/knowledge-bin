@@ -37,6 +37,28 @@ Placement specifiers are:
 
 This sucks. Look up the `wrapfig` package if you really need to do this.
 
+### Subfloats
+
+Several subfigures. Do as follows:
+
+    \usepackage{graphicx}
+    \usepackage{caption}
+    \usepackage{subcaption}
+
+    \begin{table}[<placement specifier>]
+        \begin{subtable}[<placement specifier>]{<width>}
+            \centering
+            ... table 1 ...
+            \caption{<sub caption>}
+        \end{subtable}
+        ~
+        \begin{subtable}[<placement specifier>]{<width>}
+            \centering
+            ... table 2 ...
+            \caption{<sub caption>}
+        \end{subtable}
+    \end{table}
+
 ## Tables
 
     \begin{table}
