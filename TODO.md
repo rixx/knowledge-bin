@@ -22,4 +22,7 @@
     [ ] crafts/sewing.md
     [ ] crafts/3dprinting.md
     [ ] crafts/vectorizing.md
+    [ ] code/languages/latex/09_code_listings.md
+    [ ] code/languages/latex/10_bibliography.md
+    [ ] code/languages/latex/11_glossary.md
 
