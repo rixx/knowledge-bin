@@ -27,7 +27,67 @@ You might also have to use a descriptor like this to use other environments like
 
 ## Spanning: Multicolumn, Multirow
 
+    \multicolumn{2}{|c|}{content}
 
+    \usepackage{multirow}
+    \multirow{2}{*}{content}   % second parameter is width, * is natural width
+
+## Controlling the size
+Use `graphicx` to resize the whole table:
+
+    \usepackage{graphicx}
+
+    \resizebox{8cm}{!} {
+        \begin{tabular}
+        …
+        \end{tabular}
+    }
+
+You can also use `\scalebox{0.7}{…}` if you would rather use ratios.
+
+## Changing the font size
+
+    { \footnotesize
+        \begin{tabular}
+        …
+        \end{tabular}
+    }
+
+## Change colors
+### Alternating row colors
+
+    \usepackage[table]{xcolor}
+
+    \rowcolors{1}{green}{pink}
+    \begin{tabular}
+    …
+    \end{tabular}
+
+You can add `\hiderowcolors` to disable this feature until the end of the table, counter with `\showrowcolors`.
+
+### Highlight cells
+
+    \usepackage[table]{xcolor}
+
+    \cellcolor[gray]{0.9}
+    \cellcolor{red}
+
+## Refs, captions and floating
+
+If you want a `\listoftables` and refs and captions and even floating, you need to place your `tabular` environment (containing your content) inside a `table` environment:
+
+    \begin{table}[position specifier]
+        \centering
+
+        \begin{tabular}{c|ll}
+        …
+        \end{tabular}
+
+        \caption{olol \latex}
+        \label{tab:olol}
+    \end{table}
+
+Position specifier being: *h*ere, *t*op, *b*ottom, *c*enter, *!* override float limitations.
 
 ## Infinitely more stuff and other packages:
 
