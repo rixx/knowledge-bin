@@ -1,8 +1,10 @@
 def poker(hands):
+    "return the highest ranked hand out of a list of hands"
     return max(hands, key=hand_rank)
 
 
 def hand_rank(hand):
+    "assign a rank to a given hand. returns a tupel (rank, tie breaker(s))"
     ranks = card_ranks(hand)
     if straight(ranks) and flush(hand):            # straight flush
         return (8, max(ranks))
@@ -25,6 +27,8 @@ def hand_rank(hand):
 
 
 def card_ranks(hand):
+    "extracts the card ranks of a hand as integers and returns them sorted in
+    descending order"
     ranks = ['--23456789TJQKA'.index(r) for r,s in hand]
     ranks.sort(reverse=True)
     return ranks
