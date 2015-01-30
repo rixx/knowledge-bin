@@ -30,6 +30,12 @@ def card_ranks(hand):
     ranks.sort(reverse=True)
     return ranks
 
+def straight(ranks):
+    return (max(ranks) - min(ranks) == 4) and len(set(ranks)) == 5
+
+def flush(hand):
+    return len(set(hand)) == 1
+
 
 def test():
     sf = "6C 7C 8C 9C TC".split()
@@ -49,5 +55,11 @@ def test():
     assert card_ranks(sf) == [10,9,8,7,6]
     assert card_ranks(fk) == [9,9,9,9,7]
     assert card_ranks(fh) == [10,10,10,7,7]
+
+    assert straight([9, 8, 7, 6, 5]) == True
+    assert straight([9, 8, 8, 6, 5]) == False
+
+    assert flush(sf) == True
+    assert flush(fk) == False
 
     return "tests pass"
