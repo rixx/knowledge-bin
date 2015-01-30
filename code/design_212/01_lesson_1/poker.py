@@ -25,7 +25,10 @@ def hand_rank(hand):
     else:                                          # high card
         return (0, ranks)
 
-
+def card_ranks(hand):
+    ranks = ['--23456789TJQKA'.index(r) for r,s in hand]
+    ranks.sort(reverse=True)
+    return ranks
 
 
 def test():
@@ -42,5 +45,9 @@ def test():
     assert hand_rank(sf) == (8, 10)
     assert hand_rank(fk) == (7, 9, 7)
     assert hand_rank(fh) == (6, 10, 7)
+
+    assert card_ranks(sf) == [10,9,8,7,6]
+    assert card_ranks(fk) == [9,9,9,9,7]
+    assert card_ranks(fh) == [10,10,10,7,7]
 
     return "tests pass"
