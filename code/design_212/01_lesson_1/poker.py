@@ -1,5 +1,3 @@
-
-
 def poker(hands):
     return max(hands, key=hand_rank)
 
@@ -25,13 +23,16 @@ def hand_rank(hand):
     else:                                          # high card
         return (0, ranks)
 
+
 def card_ranks(hand):
     ranks = ['--23456789TJQKA'.index(r) for r,s in hand]
     ranks.sort(reverse=True)
     return ranks
 
+
 def straight(ranks):
     return (max(ranks) - min(ranks) == 4) and len(set(ranks)) == 5
+
 
 def flush(hand):
     return len(set(hand)) == 1
