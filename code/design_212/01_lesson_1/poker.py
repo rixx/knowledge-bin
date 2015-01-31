@@ -27,7 +27,7 @@ def hand_rank(hand):
 
 
 def card_ranks(hand):
-    "extracts the card ranks of a hand as integers and returns them sorted in
+    "extracts the card ranks of a hand as integers and returns them sorted in\
     descending order"
     ranks = ['--23456789TJQKA'.index(r) for r,s in hand]
     ranks.sort(reverse=True)
@@ -39,13 +39,33 @@ def straight(ranks):
 
 
 def flush(hand):
-    return len(set(hand)) == 1
+    return len(set([s for r, s in hand])) == 1
+
+
+def kind(n, ranks):
+    for card in ranks:
+        if ranks.count(card) == n:
+            return card
+    return None
+
+
+def two_pair(ranks):
+    first_match = kind(2, ranks)
+    if first_match:
+        second_match = kind(2, [rank for rank in ranks if rank != first_match])
+        if second_match:
+            return (first_match, second_match)
+    return None
 
 
 def test():
     sf = "6C 7C 8C 9C TC".split()
     fk = "9D 9H 9S 9C 7D".split()
     fh = "TD TC TH 7C 7D".split()
+    tp = "5S 5D 9H 9C 6S".split()
+
+    fkranks = card_ranks(fk)
+    tpranks = card_ranks(tp)
 
     assert poker([sf, fk, fh]) == sf
     assert poker([fk, fh]) == fk
@@ -67,4 +87,14 @@ def test():
     assert flush(sf) == True
     assert flush(fk) == False
 
+    assert kind(4, fkranks) == 9
+    assert kind(3, fkranks) == None
+    assert kind(2, fkranks) == None
+    assert kind(1, fkranks) == 7
+
+    assert two_pair(fkranks) == None
+    assert two_pair(tpranks) == (9, 5)
+
     return "tests pass"
+
+print(test())
