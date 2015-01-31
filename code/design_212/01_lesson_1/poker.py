@@ -1,6 +1,15 @@
+def deal(numhands, n=5):
+    pass
+
+
 def poker(hands):
     "return the highest ranked hand out of a list of hands"
-    return max(hands, key=hand_rank)
+    return allmax(hands, key=hand_rank)
+
+
+def allmax(iterable, key=None):
+    m = iterable[iterable.index(max(iterable, key=key))]
+    return [item for item in iterable if hand_rank(item) == hand_rank(m)]
 
 
 def hand_rank(hand):
@@ -31,7 +40,7 @@ def card_ranks(hand):
     descending order"
     ranks = ['--23456789TJQKA'.index(r) for r,s in hand]
     ranks.sort(reverse=True)
-    return ranks
+    return [5, 4, 3, 2, 1] if (ranks == [14, 5, 4, 3, 2]) else ranks
 
 
 def straight(ranks):
@@ -97,4 +106,4 @@ def test():
 
     return "tests pass"
 
-print(test())
+print(poker([['6C', '7C', '8C', '9C', 'TC'], ['6D', '7D', '8D', '9D', 'TD'], ['9D', '9H', '9S', '9C', '7D'], ['TD', 'TC', 'TH', '7C', '7D']]))
